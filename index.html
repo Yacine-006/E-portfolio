@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>E-portfolio de KRID BHIRI Mohamed-Yacine – BUT GEA Draguignan</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;1,300;1,400&family=Playfair+Display:ital,wght@0,500;1,400&display=swap">
+<style>
+:root{--bg:#f8f8f8;--ink:#0a0a0a;--soft:#3d3d3d;--ph:#e3e3e3;
+--serif:"Playfair Display",Didot,"Bodoni 72",Georgia,serif;--sans:"Jost","Century Gothic",system-ui,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d0d0d;--ink:#f3f3f3;--soft:#bdbdbd;--ph:#1c1c1c}}
+:root[data-theme="dark"]{--bg:#0d0d0d;--ink:#f3f3f3;--soft:#bdbdbd;--ph:#1c1c1c}
+html{scroll-padding-top:env(safe-area-inset-top,0px);height:100%}
+*{box-sizing:border-box}
+body{margin:0;height:100%;background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:300;font-style:italic;line-height:1.65}
+a{color:inherit}
+/* bandeau vertical */
+.band{position:fixed;left:0;top:0;bottom:0;width:46px;border-right:1px solid var(--ink);background:var(--bg);z-index:10;
+display:flex;flex-direction:column;align-items:center;justify-content:space-between;
+padding:calc(14px + env(safe-area-inset-top,0px)) 0 calc(14px + env(safe-area-inset-bottom,0px))}
+.band span{writing-mode:vertical-rl;font-family:var(--serif);font-size:.82rem;white-space:nowrap}
+.band .pill{width:18px;height:32px;border:1px solid var(--ink);border-radius:9px;flex:none}
+main{margin-left:46px;padding:0 20px 40px;max-width:1100px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);display:flex;gap:20px;overflow-x:auto;padding:14px 0;border-bottom:1px solid var(--ink)}
+nav a{white-space:nowrap;text-decoration:none;font-size:.9rem;padding-bottom:2px;border-bottom:1px solid transparent}
+nav a.on{border-bottom-color:var(--ink)}
+nav b{font-family:var(--serif);font-weight:500;font-style:normal;margin-right:5px}
+section{display:block}
+html.js section{display:none}
+html.js section.on{display:block}
+html:not(.js) section{margin-bottom:48px}
+/* titres */
+.t{font-family:var(--serif);font-weight:500;font-style:normal;line-height:.92;letter-spacing:-.04em;font-size:clamp(2.7rem,12vw,5.6rem);margin:0}
+.t i{display:block;font-weight:400;padding-left:.8em}
+.num{font-family:var(--serif);font-style:italic;font-size:clamp(3rem,13vw,6rem);line-height:1;letter-spacing:-.05em}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;padding:34px 0 26px}
+.box{border:1px solid var(--ink);padding:18px 20px;margin:0 0 16px}
+.box h3{font-family:var(--serif);font-style:normal;font-weight:500;font-size:1.25rem;margin:0 0 6px;letter-spacing:-.02em}
+.box p{margin:0;color:var(--soft)}
+.todo{opacity:.65}
+.cols{display:grid;gap:26px}
+@media(min-width:760px){.cols{grid-template-columns:1.1fr .9fr;align-items:start}}
+.photo{aspect-ratio:3/4;width:100%;max-width:380px;background:var(--ph);border:1px dashed var(--ink);display:grid;place-items:center;text-align:center;padding:16px;color:var(--soft);font-size:.9rem}
+/* hero */
+.hero{min-height:calc(100vh - 60px);min-height:calc(100svh - 60px);display:grid;grid-template-rows:auto 1fr auto;padding:26px 0 22px;position:relative}
+.hello{text-align:right;font-family:var(--serif);font-size:clamp(1.1rem,4.5vw,1.6rem);line-height:1.25}
+.hello small{display:block;font-family:var(--sans);font-size:.85rem;margin-top:8px;color:var(--soft)}
+.mega{font-family:var(--serif);font-weight:500;font-style:normal;margin:0;align-self:center;line-height:.82;letter-spacing:-.05em;font-size:clamp(4.2rem,22vw,12.5rem)}
+.mega i{display:block;font-weight:400;margin-left:26%}
+.who{display:flex;justify-content:space-between;align-items:flex-end;gap:12px}
+.who b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(1rem,4.2vw,1.35rem)}
+.who span{font-size:.85rem;letter-spacing:.08em;color:var(--soft)}
+.arrow{flex:none;width:68px;height:38px;border:1px solid var(--ink);border-radius:19px;background:none;color:var(--ink);cursor:pointer;display:grid;place-items:center}
+/* tuiles */
+.tiles{display:grid;gap:14px}
+@media(min-width:600px){.tiles{grid-template-columns:1fr 1fr}}
+.tile{display:flex;justify-content:space-between;align-items:flex-end;gap:10px;text-decoration:none;border:1px solid var(--ink);padding:18px 20px;min-height:120px;transition:background .2s,color .2s}
+.tile:hover,.tile:active{background:var(--ink);color:var(--bg)}
+.tile b{display:block;font-family:var(--serif);font-weight:500;font-style:normal;font-size:1.3rem;letter-spacing:-.02em}
+.tile small{font-size:.88rem;opacity:.8}
+.tile .num{font-size:2.6rem}
+.sp{height:36px}
+footer{margin-top:36px;padding-top:16px;border-top:1px solid var(--ink);font-size:.8rem;color:var(--soft)}
+</style>
+<script>document.documentElement.className+=' js'</script>
+</head>
+<body>
+<aside class="band" aria-hidden="true">
+<span>E-portfolio</span><i class="pill"></i><span>KRID BHIRI Mohamed-Yacine</span><i class="pill"></i><span>BUT GEA Draguignan</span>
+</aside>
+<main>
+<nav id="nav">
+<a href="#accueil"><b>01</b>Accueil</a>
+<a href="#bachelor"><b>02</b>Bachelor GEA</a>
+<a href="#competences"><b>03</b>Mes compétences</a>
+<a href="#projet"><b>04</b>Mon projet</a>
+<a href="#contact"><b>05</b>Contact</a>
+</nav>
+
+<section id="accueil">
+<div class="hero">
+<div class="hello">Bienvenue dans<br>mon e-portfolio !<small>Mon parcours en BUT GEA</small></div>
+<h1 class="mega" aria-label="E-portfolio de KRID BHIRI Mohamed-Yacine">E-port<i>folio</i></h1>
+<div class="who">
+<div><b>KRID BHIRI Mohamed-Yacine</b><span>BUT GEA DRAGUIGNAN</span></div>
+<button class="arrow" id="go" aria-label="Descendre"><svg width="38" height="12" viewBox="0 0 38 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M0 6h36M31 1l5 5-5 5"/></svg></button>
+</div>
+</div>
+
+<div id="bienvenue" class="head"><h2 class="t">Bonjour &amp;<i>bienvenue</i></h2><span class="num">01</span></div>
+<div class="cols">
+<div>
+<p>Bonjour et bienvenue dans mon e-portfolio. Étudiant en première année de BUT Gestion des Entreprises et des Administrations à Draguignan, je rassemble ici mon parcours, mes réalisations et mes ambitions.</p>
+<p>Vous y trouverez ma formation, les compétences que je développe, mon projet professionnel et personnel (devenir gestionnaire de patrimoine) ainsi que mes coordonnées. Les accès rapides ci-dessous vous mènent directement à chaque rubrique.</p>
+</div>
+<div class="photo">Emplacement de ma photo<br>(noir et blanc de préférence)</div>
+</div>
+
+<div class="sp"></div>
+<div class="head"><h2 class="t">Accès<i>rapides</i></h2></div>
+<div class="tiles">
+<a class="tile" href="#bachelor"><div><b>Bachelor GEA</b><small>Ma formation</small></div><span class="num">02</span></a>
+<a class="tile" href="#competences"><div><b>Mes compétences</b><small>Travaux et projets</small></div><span class="num">03</span></a>
+<a class="tile" href="#projet"><div><b>Mon projet professionnel et personnel</b><small>Mes objectifs</small></div><span class="num">04</span></a>
+<a class="tile" href="#contact"><div><b>Contact</b><small>Me joindre</small></div><span class="num">05</span></a>
+</div>
+</section>
+
+<section id="bachelor">
+<div class="head"><h1 class="t">Le bachelor<i>GEA</i></h1><span class="num">02</span></div>
+<div class="box todo"><h3>Ma formation</h3><p>Présentation du BUT Gestion des Entreprises et des Administrations à compléter.</p></div>
+</section>
+
+<section id="competences">
+<div class="head"><h1 class="t">Mes<i>compétences</i></h1><span class="num">03</span></div>
+<div class="box todo"><h3>À venir</h3><p>Compétences, travaux et projets à ajouter.</p></div>
+</section>
+
+<section id="projet">
+<div class="head"><h1 class="t">Mon projet<i>professionnel</i></h1><span class="num">04</span></div>
+<div class="cols">
+<div>
+<div class="box"><h3>Mon objectif</h3><p>Devenir gestionnaire de patrimoine : accompagner des clients dans la gestion, la protection et la valorisation de leur patrimoine.</p></div>
+<div class="box todo"><h3>Mon parcours envisagé</h3><p>Formations visées et étapes à compléter.</p></div>
+<div class="box todo"><h3>Mes motivations</h3><p>À compléter.</p></div>
+</div>
+<div class="photo">Photo ou image<br>illustrant mon projet</div>
+</div>
+<div class="head"><h2 class="t">Mon projet<i>personnel</i></h2></div>
+<div class="box todo"><h3>Mes valeurs et mes ambitions</h3><p>Centres d'intérêt, valeurs et projets personnels à compléter.</p></div>
+</section>
+
+<section id="contact">
+<div class="head"><h1 class="t">Contactez-<i>moi !</i></h1><span class="num">05</span></div>
+<div class="cols">
+<div>
+<p>Une question, une idée ou l'envie d'échanger ? N'hésitez pas à me contacter.</p>
+<div class="box todo"><h3>Mes coordonnées</h3><p>E-mail : à compléter<br>Téléphone : à compléter<br>LinkedIn : à compléter</p></div>
+</div>
+<div class="photo">Emplacement photo</div>
+</div>
+</section>
+
+<footer>E-portfolio de KRID BHIRI Mohamed-Yacine – BUT GEA Draguignan</footer>
+</main>
+<script>
+(function(){
+var ids=["accueil","bachelor","competences","projet","contact"];
+function show(){
+var h=(location.hash||"#accueil").slice(1);
+if(ids.indexOf(h)<0)h="accueil";
+ids.forEach(function(i){document.getElementById(i).classList.toggle("on",i===h)});
+document.querySelectorAll("#nav a").forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+h)});
+window.scrollTo(0,0);
+}
+window.addEventListener("hashchange",show);
+document.getElementById("go").addEventListener("click",function(){document.getElementById("bienvenue").scrollIntoView({behavior:"smooth"})});
+show();
+})();
+</script>
+</body>
+</html>
