@@ -4,66 +4,88 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>E-portfolio de KRID BHIRI Mohamed-Yacine – BUT GEA Draguignan</title>
+<!--
+  ============================================================
+  E-PORTFOLIO – KRID BHIRI Mohamed-Yacine
+  ============================================================
+  COMMENT MODIFIER CE FICHIER
+
+  METHODE 1 (la plus simple) : ouvre ce fichier dans Safari ou Chrome,
+    1. appuie sur le bouton « Modifier » en bas a droite
+    2. touche un texte pour le changer
+    3. touche un cadre photo pour choisir ta photo
+    4. appuie sur « Enregistrer » : un nouveau index.html est telecharge
+       (remplace l'ancien fichier par celui-la)
+
+  METHODE 2 : ouvre le fichier dans un editeur de texte et remplace
+    directement les textes. Chaque rubrique est reperee par un
+    commentaire du type  ===== ACCUEIL =====
+  ============================================================
+-->
+<script>document.documentElement.className+=' js'</script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;1,300;1,400&family=Playfair+Display:ital,wght@0,500;1,400&display=swap">
 <style>
-:root{--bg:#f8f8f8;--ink:#0a0a0a;--soft:#3d3d3d;--ph:#e3e3e3;
+:root{--bg:#f2f7fb;--ink:#1a2a44;--soft:#4a5b75;--ph:#dce9f5;--acc:#e2573b;--sage:#bfe3d6;
 --serif:"Playfair Display",Didot,"Bodoni 72",Georgia,serif;--sans:"Jost","Century Gothic",system-ui,sans-serif;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d0d0d;--ink:#f3f3f3;--soft:#bdbdbd;--ph:#1c1c1c}}
-:root[data-theme="dark"]{--bg:#0d0d0d;--ink:#f3f3f3;--soft:#bdbdbd;--ph:#1c1c1c}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121b2b;--ink:#eaf1fa;--soft:#b4c3d8;--ph:#1d2a40;--acc:#ff8f73;--sage:#3f6b63}}
+:root[data-theme="dark"]{--bg:#121b2b;--ink:#eaf1fa;--soft:#b4c3d8;--ph:#1d2a40;--acc:#ff8f73;--sage:#3f6b63}
 html{scroll-padding-top:env(safe-area-inset-top,0px);height:100%}
 *{box-sizing:border-box}
 body{margin:0;height:100%;background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:300;font-style:italic;line-height:1.65}
 a{color:inherit}
-/* bandeau vertical */
-.band{position:fixed;left:0;top:0;bottom:0;width:46px;border-right:1px solid var(--ink);background:var(--bg);z-index:10;
-display:flex;flex-direction:column;align-items:center;justify-content:space-between;
-padding:calc(14px + env(safe-area-inset-top,0px)) 0 calc(14px + env(safe-area-inset-bottom,0px))}
+.band{position:fixed;left:0;top:0;bottom:0;width:46px;border-right:1px solid var(--ink);background:var(--bg);z-index:10;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:calc(14px + env(safe-area-inset-top,0px)) 0 calc(14px + env(safe-area-inset-bottom,0px))}
 .band span{writing-mode:vertical-rl;font-family:var(--serif);font-size:.82rem;white-space:nowrap}
-.band .pill{width:18px;height:32px;border:1px solid var(--ink);border-radius:9px;flex:none}
-main{margin-left:46px;padding:0 20px 40px;max-width:1100px}
+.band .pill{width:18px;height:32px;border:1px solid var(--ink);border-radius:9px;flex:none;background:var(--sage)}
+main{margin-left:46px;padding:0 20px 90px;max-width:1100px}
 nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);display:flex;gap:20px;overflow-x:auto;padding:14px 0;border-bottom:1px solid var(--ink)}
 nav a{white-space:nowrap;text-decoration:none;font-size:.9rem;padding-bottom:2px;border-bottom:1px solid transparent}
-nav a.on{border-bottom-color:var(--ink)}
-nav b{font-family:var(--serif);font-weight:500;font-style:normal;margin-right:5px}
-section{display:block}
-html.js section{display:none}
+nav a.on{border-bottom-color:var(--acc)}
+nav b{color:var(--acc);font-family:var(--serif);font-weight:500;font-style:normal;margin-right:5px}
+section{display:block;margin-bottom:48px}
+html.js section{display:none;margin-bottom:0}
 html.js section.on{display:block}
-html:not(.js) section{margin-bottom:48px}
-/* titres */
 .t{font-family:var(--serif);font-weight:500;font-style:normal;line-height:.92;letter-spacing:-.04em;font-size:clamp(2.7rem,12vw,5.6rem);margin:0}
-.t i{display:block;font-weight:400;padding-left:.8em}
-.num{font-family:var(--serif);font-style:italic;font-size:clamp(3rem,13vw,6rem);line-height:1;letter-spacing:-.05em}
+.t i{display:block;font-weight:400;padding-left:.8em;color:var(--acc)}
+.num{color:var(--acc);font-family:var(--serif);font-style:italic;font-size:clamp(3rem,13vw,6rem);line-height:1;letter-spacing:-.05em}
 .head{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;padding:34px 0 26px}
-.box{border:1px solid var(--ink);padding:18px 20px;margin:0 0 16px}
+.box{border:1px solid var(--ink);border-radius:16px;padding:18px 20px;margin:0 0 16px}
 .box h3{font-family:var(--serif);font-style:normal;font-weight:500;font-size:1.25rem;margin:0 0 6px;letter-spacing:-.02em}
 .box p{margin:0;color:var(--soft)}
 .todo{opacity:.65}
 .cols{display:grid;gap:26px}
 @media(min-width:760px){.cols{grid-template-columns:1.1fr .9fr;align-items:start}}
-.photo{aspect-ratio:3/4;width:100%;max-width:380px;background:var(--ph);border:1px dashed var(--ink);display:grid;place-items:center;text-align:center;padding:16px;color:var(--soft);font-size:.9rem}
-/* hero */
-.hero{min-height:calc(100vh - 60px);min-height:calc(100svh - 60px);display:grid;grid-template-rows:auto 1fr auto;padding:26px 0 22px;position:relative}
+.photo{aspect-ratio:3/4;width:100%;max-width:380px;background:var(--ph);border:1px dashed var(--ink);border-radius:22px;display:grid;place-items:center;text-align:center;padding:16px;color:var(--soft);font-size:.9rem;overflow:hidden}
+.photo.has{padding:0;border-style:solid}
+.photo img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(1)}
+body.color .photo img{filter:none}
+.hero{min-height:calc(100vh - 60px);min-height:calc(100svh - 60px);display:grid;grid-template-rows:auto 1fr auto;padding:26px 0 22px}
 .hello{text-align:right;font-family:var(--serif);font-size:clamp(1.1rem,4.5vw,1.6rem);line-height:1.25}
 .hello small{display:block;font-family:var(--sans);font-size:.85rem;margin-top:8px;color:var(--soft)}
 .mega{font-family:var(--serif);font-weight:500;font-style:normal;margin:0;align-self:center;line-height:.82;letter-spacing:-.05em;font-size:clamp(4.2rem,22vw,12.5rem)}
-.mega i{display:block;font-weight:400;margin-left:26%}
+.mega i{display:block;font-weight:400;margin-left:26%;color:var(--acc)}
 .who{display:flex;justify-content:space-between;align-items:flex-end;gap:12px}
 .who b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(1rem,4.2vw,1.35rem)}
 .who span{font-size:.85rem;letter-spacing:.08em;color:var(--soft)}
-.arrow{flex:none;width:68px;height:38px;border:1px solid var(--ink);border-radius:19px;background:none;color:var(--ink);cursor:pointer;display:grid;place-items:center}
-/* tuiles */
+.arrow{flex:none;width:68px;height:38px;border:1px solid var(--ink);border-radius:19px;background:var(--sage);color:var(--ink);cursor:pointer;display:grid;place-items:center}
 .tiles{display:grid;gap:14px}
 @media(min-width:600px){.tiles{grid-template-columns:1fr 1fr}}
-.tile{display:flex;justify-content:space-between;align-items:flex-end;gap:10px;text-decoration:none;border:1px solid var(--ink);padding:18px 20px;min-height:120px;transition:background .2s,color .2s}
-.tile:hover,.tile:active{background:var(--ink);color:var(--bg)}
+.tile{display:flex;justify-content:space-between;align-items:flex-end;gap:10px;text-decoration:none;border:1px solid var(--ink);border-radius:18px;padding:18px 20px;min-height:120px;transition:background .2s,color .2s}
+.tile:hover,.tile:active{background:var(--acc);color:#fff;border-color:var(--acc)}
+.tile:hover .num,.tile:active .num{color:#fff}
 .tile b{display:block;font-family:var(--serif);font-weight:500;font-style:normal;font-size:1.3rem;letter-spacing:-.02em}
 .tile small{font-size:.88rem;opacity:.8}
 .tile .num{font-size:2.6rem}
 .sp{height:36px}
 footer{margin-top:36px;padding-top:16px;border-top:1px solid var(--ink);font-size:.8rem;color:var(--soft)}
+/* barre de modification */
+.bar{position:fixed;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:20;display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end;max-width:calc(100vw - 70px)}
+.bar button{font:400 .9rem var(--sans);font-style:normal;border:1px solid var(--ink);background:var(--sage);color:var(--ink);padding:10px 14px;border-radius:999px;cursor:pointer}
+.bar button[hidden]{display:none}
+html.js body.editing section{display:block;margin-bottom:48px}
+body.editing [contenteditable]{outline:1px dashed #888;outline-offset:3px}
+body.editing .photo{cursor:pointer;border-color:#888}
 </style>
-<script>document.documentElement.className+=' js'</script>
 </head>
 <body>
 <aside class="band" aria-hidden="true">
@@ -78,10 +100,11 @@ footer{margin-top:36px;padding-top:16px;border-top:1px solid var(--ink);font-siz
 <a href="#contact"><b>05</b>Contact</a>
 </nav>
 
+<!-- ===================== ACCUEIL ===================== -->
 <section id="accueil">
 <div class="hero">
 <div class="hello">Bienvenue dans<br>mon e-portfolio !<small>Mon parcours en BUT GEA</small></div>
-<h1 class="mega" aria-label="E-portfolio de KRID BHIRI Mohamed-Yacine">E-port<i>folio</i></h1>
+<h1 class="mega">E-port<i>folio</i></h1>
 <div class="who">
 <div><b>KRID BHIRI Mohamed-Yacine</b><span>BUT GEA DRAGUIGNAN</span></div>
 <button class="arrow" id="go" aria-label="Descendre"><svg width="38" height="12" viewBox="0 0 38 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M0 6h36M31 1l5 5-5 5"/></svg></button>
@@ -94,7 +117,8 @@ footer{margin-top:36px;padding-top:16px;border-top:1px solid var(--ink);font-siz
 <p>Bonjour et bienvenue dans mon e-portfolio. Étudiant en première année de BUT Gestion des Entreprises et des Administrations à Draguignan, je rassemble ici mon parcours, mes réalisations et mes ambitions.</p>
 <p>Vous y trouverez ma formation, les compétences que je développe, mon projet professionnel et personnel (devenir gestionnaire de patrimoine) ainsi que mes coordonnées. Les accès rapides ci-dessous vous mènent directement à chaque rubrique.</p>
 </div>
-<div class="photo">Emplacement de ma photo<br>(noir et blanc de préférence)</div>
+<!-- PHOTO : en mode Modifier, touche ce cadre pour choisir ta photo -->
+<div class="photo">Emplacement de ma photo</div>
 </div>
 
 <div class="sp"></div>
@@ -107,16 +131,19 @@ footer{margin-top:36px;padding-top:16px;border-top:1px solid var(--ink);font-siz
 </div>
 </section>
 
+<!-- ===================== BACHELOR GEA ===================== -->
 <section id="bachelor">
 <div class="head"><h1 class="t">Le bachelor<i>GEA</i></h1><span class="num">02</span></div>
 <div class="box todo"><h3>Ma formation</h3><p>Présentation du BUT Gestion des Entreprises et des Administrations à compléter.</p></div>
 </section>
 
+<!-- ===================== MES COMPETENCES ===================== -->
 <section id="competences">
 <div class="head"><h1 class="t">Mes<i>compétences</i></h1><span class="num">03</span></div>
 <div class="box todo"><h3>À venir</h3><p>Compétences, travaux et projets à ajouter.</p></div>
 </section>
 
+<!-- ===================== MON PROJET ===================== -->
 <section id="projet">
 <div class="head"><h1 class="t">Mon projet<i>professionnel</i></h1><span class="num">04</span></div>
 <div class="cols">
@@ -125,12 +152,13 @@ footer{margin-top:36px;padding-top:16px;border-top:1px solid var(--ink);font-siz
 <div class="box todo"><h3>Mon parcours envisagé</h3><p>Formations visées et étapes à compléter.</p></div>
 <div class="box todo"><h3>Mes motivations</h3><p>À compléter.</p></div>
 </div>
-<div class="photo">Photo ou image<br>illustrant mon projet</div>
+<div class="photo">Photo ou image illustrant mon projet</div>
 </div>
 <div class="head"><h2 class="t">Mon projet<i>personnel</i></h2></div>
 <div class="box todo"><h3>Mes valeurs et mes ambitions</h3><p>Centres d'intérêt, valeurs et projets personnels à compléter.</p></div>
 </section>
 
+<!-- ===================== CONTACT ===================== -->
 <section id="contact">
 <div class="head"><h1 class="t">Contactez-<i>moi !</i></h1><span class="num">05</span></div>
 <div class="cols">
@@ -144,19 +172,73 @@ footer{margin-top:36px;padding-top:16px;border-top:1px solid var(--ink);font-siz
 
 <footer>E-portfolio de KRID BHIRI Mohamed-Yacine – BUT GEA Draguignan</footer>
 </main>
+
+<!-- BARRE DE MODIFICATION (supprime ce bloc avant une mise en ligne publique) -->
+<div class="bar" id="bar">
+<button id="bEdit" type="button">✏️ Modifier</button>
+<button id="bSave" type="button" hidden>💾 Enregistrer</button>
+<button id="bBw" type="button" hidden>Noir &amp; blanc / Couleur</button>
+</div>
+<input type="file" id="pick" accept="image/*" hidden>
+
 <script>
 (function(){
-var ids=["accueil","bachelor","competences","projet","contact"];
+var ids=["accueil","bachelor","competences","projet","contact"],B=document.body;
+var EDIT=".hello,.who b,.who span,section h1,section h2,section h3,section p,section small,.tile b,footer";
 function show(){
 var h=(location.hash||"#accueil").slice(1);
 if(ids.indexOf(h)<0)h="accueil";
 ids.forEach(function(i){document.getElementById(i).classList.toggle("on",i===h)});
 document.querySelectorAll("#nav a").forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+h)});
-window.scrollTo(0,0);
+if(!B.classList.contains("editing"))window.scrollTo(0,0);
 }
 window.addEventListener("hashchange",show);
 document.getElementById("go").addEventListener("click",function(){document.getElementById("bienvenue").scrollIntoView({behavior:"smooth"})});
 show();
+
+var bEdit=document.getElementById("bEdit"),bSave=document.getElementById("bSave"),bBw=document.getElementById("bBw"),pick=document.getElementById("pick"),target=null;
+function setEditing(on){
+B.classList.toggle("editing",on);
+document.querySelectorAll(EDIT).forEach(function(e){if(on)e.setAttribute("contenteditable","true");else e.removeAttribute("contenteditable")});
+bEdit.textContent=on?"Terminer":"✏️ Modifier";
+bSave.hidden=!on;bBw.hidden=!on;
+}
+bEdit.addEventListener("click",function(){setEditing(!B.classList.contains("editing"))});
+bBw.addEventListener("click",function(){B.classList.toggle("color")});
+document.addEventListener("click",function(e){
+if(!B.classList.contains("editing"))return;
+var t=e.target.closest(".tile");if(t)e.preventDefault();
+var p=e.target.closest(".photo");if(p){target=p;pick.click();}
+},true);
+pick.addEventListener("change",function(){
+var f=pick.files[0];if(!f||!target)return;
+var r=new FileReader();
+r.onload=function(){
+var im=new Image();
+im.onload=function(){
+var m=1000,s=Math.min(1,m/Math.max(im.width,im.height)),c=document.createElement("canvas");
+c.width=Math.round(im.width*s);c.height=Math.round(im.height*s);
+c.getContext("2d").drawImage(im,0,0,c.width,c.height);
+target.innerHTML='<img alt="Photo" src="'+c.toDataURL("image/jpeg",.85)+'">';
+target.classList.add("has");pick.value="";
+};
+im.src=r.result;
+};
+r.readAsDataURL(f);
+});
+bSave.addEventListener("click",function(){
+var c=document.documentElement.cloneNode(true);
+c.classList.remove("js");
+c.querySelector("body").classList.remove("editing");
+c.querySelectorAll("[contenteditable]").forEach(function(e){e.removeAttribute("contenteditable")});
+c.querySelectorAll(".on").forEach(function(e){e.classList.remove("on")});
+c.querySelector("#bEdit").textContent="✏️ Modifier";
+c.querySelector("#bSave").setAttribute("hidden","");
+c.querySelector("#bBw").setAttribute("hidden","");
+var blob=new Blob(["<!DOCTYPE html>\n"+c.outerHTML],{type:"text/html"});
+var a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="index.html";
+document.body.appendChild(a);a.click();a.remove();
+});
 })();
 </script>
 </body>
